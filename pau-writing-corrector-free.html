@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>PAU Writing Coach · Andalucía</title>
+<style>
+:root{--bg:#f3efe5;--paper:#fffdf8;--ink:#20201e;--muted:#696760;--accent:#1f5d50;--accent2:#c8734a;--line:#d8d0c2;--soft:#eee8dc;--good:#2f6f55;--warn:#9a5f23;--bad:#9a3a38}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}.wrap{max-width:1160px;margin:auto;padding:28px 20px 56px}
+header{display:flex;gap:20px;align-items:flex-end;justify-content:space-between;border-bottom:2px solid var(--ink);padding-bottom:18px;margin-bottom:24px}.brand h1{margin:0;font-family:Georgia,serif;font-size:clamp(30px,4vw,50px);letter-spacing:-.04em}.brand p{margin:7px 0 0;color:var(--muted);font-size:14px}.badge{border:1px solid var(--ink);padding:8px 12px;border-radius:999px;font-size:12px;background:var(--paper);white-space:nowrap}
+.grid{display:grid;grid-template-columns:1.25fr .75fr;gap:20px}.card{background:var(--paper);border:1px solid var(--line);border-radius:18px;padding:20px;box-shadow:0 8px 20px rgba(39,33,24,.05)}label{font-weight:750;font-size:14px}select,input,textarea,button{font:inherit}select,input,textarea{width:100%;border:1px solid var(--line);border-radius:12px;background:#fff;padding:11px 12px;color:var(--ink)}textarea{min-height:330px;resize:vertical;line-height:1.65}.row{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:14px}.field{display:flex;flex-direction:column;gap:7px}.toolbar{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-top:10px;flex-wrap:wrap}.counter{font-size:13px;color:var(--muted)}.counter strong{color:var(--ink)}button{border:0;border-radius:12px;padding:12px 18px;font-weight:800;cursor:pointer}.primary{background:var(--accent);color:white}.ghost{background:transparent;border:1px solid var(--line);color:var(--ink)}.notice{background:#f4eadf;border-left:4px solid var(--accent2);padding:12px 14px;border-radius:8px;font-size:13px;line-height:1.5;margin-bottom:14px}.mini{font-size:12px;color:var(--muted);margin-top:10px}.rubric h3,.results h3{margin:0 0 14px;font-family:Georgia,serif;font-size:22px}.rubric-item{padding:12px 0;border-bottom:1px solid var(--soft)}.rubric-item:last-child{border-bottom:0}.rubric-head{display:flex;justify-content:space-between;gap:12px;font-weight:800}.rubric-item p{margin:5px 0 0;color:var(--muted);font-size:13px;line-height:1.45}.results{margin-top:20px;display:none}.scoreline{display:flex;align-items:center;justify-content:space-between;gap:18px;flex-wrap:wrap}.score{font-family:Georgia,serif;font-size:46px;font-weight:700}.score small{font-size:18px;color:var(--muted)}.pills{display:flex;gap:8px;flex-wrap:wrap}.pill{background:var(--soft);padding:7px 10px;border-radius:999px;font-size:12px}.breakdown{display:grid;grid-template-columns:repeat(5,1fr);gap:10px;margin:16px 0}.metric{border:1px solid var(--line);border-radius:12px;padding:11px;background:white}.metric b{display:block;font-size:18px;margin-top:4px}.metric span{font-size:11px;color:var(--muted)}.feedback{display:grid;grid-template-columns:1fr 1fr;gap:14px}.box{border:1px solid var(--line);border-radius:12px;padding:14px;background:#fff}.box h4{margin:0 0 8px}.box ul{margin:0;padding-left:18px;line-height:1.55}.box li+li{margin-top:6px}.full{margin-top:14px}.issue{border-top:1px solid var(--soft);padding:10px 0}.issue:first-child{border-top:0}.issue code{background:var(--soft);padding:2px 5px;border-radius:5px}.tag{display:inline-block;font-size:11px;font-weight:800;padding:3px 7px;border-radius:999px;margin-right:6px}.tag.warn{background:#f7e8d0;color:#7d4b18}.tag.bad{background:#f6dddd;color:#7e2f2e}.tag.good{background:#dfeee7;color:#245b46}.muted{color:var(--muted);font-size:13px}.challenge{background:#f6f2e8;border-left:4px solid var(--accent);padding:13px 14px;border-radius:8px;line-height:1.5}.disclaimer{margin-top:14px;font-size:12px;color:var(--muted);line-height:1.45}footer{margin-top:28px;padding-top:18px;border-top:1px solid var(--line);font-size:12px;color:var(--muted);display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap}
+@media(max-width:850px){.grid{grid-template-columns:1fr}.breakdown{grid-template-columns:1fr 1fr}.feedback{grid-template-columns:1fr}.row{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header><div class="brand"><h1>PAU Writing Coach</h1><p>Inglés II · Andalucía · autocorrección guiada para 2º de Bachillerato</p></div><div class="badge">Ms. Luque · free classroom edition</div></header>
+<div class="grid">
+<main class="card">
+<div class="notice"><strong>100 % gratuito:</strong> esta herramienta funciona en tu navegador. No envía la redacción a ningún servidor, no necesita cuenta y no consume ninguna API.</div>
+<div class="row"><div class="field"><label for="type">Tipo de writing</label><select id="type"><option>Argumentative / opinion</option><option>Narrative</option><option>Descriptive</option><option>Informative</option></select></div><div class="field"><label for="topic">Tema o enunciado</label><input id="topic" placeholder="Ej.: Should mobile phones be banned at school?" /></div></div>
+<div class="field"><label for="writing">Pega aquí tu redacción</label><textarea id="writing" placeholder="Write your composition here..."></textarea></div>
+<div class="toolbar"><div class="counter"><strong id="wc">0</strong> palabras · objetivo: 140–180</div><div><button class="ghost" id="clear">Limpiar</button> <button class="primary" id="correct">Analizar writing</button></div></div>
+<div class="mini">Consejo: pega también el enunciado para que la herramienta pueda comprobar palabras clave y orientar mejor la adecuación.</div>
+</main>
+<aside class="card rubric"><h3>Rúbrica PAU</h3>
+<div class="rubric-item"><div class="rubric-head"><span>Adecuación al tema</span><span>0,50</span></div><p>Relevancia y desarrollo de las ideas respecto al enunciado.</p></div>
+<div class="rubric-item"><div class="rubric-head"><span>Organización</span><span>0,75</span></div><p>Párrafos, cohesión y conectores.</p></div>
+<div class="rubric-item"><div class="rubric-head"><span>Repertorio gramatical</span><span>0,75</span></div><p>Variedad estructural y control de errores frecuentes.</p></div>
+<div class="rubric-item"><div class="rubric-head"><span>Uso del léxico</span><span>0,75</span></div><p>Variedad, precisión y repetición de vocabulario.</p></div>
+<div class="rubric-item"><div class="rubric-head"><span>Ortografía y puntuación</span><span>0,25</span></div><p>Mayúsculas, espacios, signos y algunos errores frecuentes.</p></div>
+<div class="rubric-item"><div class="rubric-head"><span>Total orientativo</span><span>3,00</span></div><p>La puntuación es una estimación automática, no una calificación oficial.</p></div>
+</aside></div>
+<section class="card results" id="results">
+<div class="scoreline"><div><h3>Informe de práctica</h3><div class="pills"><span class="pill" id="lengthPill"></span><span class="pill" id="typePill"></span><span class="pill" id="privacyPill">🔒 análisis local</span></div></div><div class="score" id="score">— <small>/ 3</small></div></div>
+<div class="breakdown"><div class="metric"><span>Adecuación</span><b id="m1">—</b></div><div class="metric"><span>Organización</span><b id="m2">—</b></div><div class="metric"><span>Gramática</span><b id="m3">—</b></div><div class="metric"><span>Léxico</span><b id="m4">—</b></div><div class="metric"><span>Ortografía</span><b id="m5">—</b></div></div>
+<div class="feedback"><div class="box"><h4>✓ Lo que funciona</h4><ul id="strengths"></ul></div><div class="box"><h4>→ Cómo mejorar</h4><ul id="improve"></ul></div></div>
+<div class="box full"><h4>🔎 Revisión guiada de errores frecuentes</h4><div id="issues"></div></div>
+<div class="box full"><h4>🧠 Tu reto de revisión</h4><div class="challenge" id="challenge"></div></div>
+<div class="disclaimer"><strong>Importante:</strong> este corrector no “entiende” el texto como una persona o una IA generativa. Detecta patrones, estructura, repetición y errores frecuentes. La nota sirve para practicar la rúbrica, pero la valoración final debe hacerla el profesorado.</div>
+</section>
+<footer><span>PAU Writing Coach · Andalucía · uso educativo</span><span>Created by Ms. Luque · funciona sin conexión tras descargar el archivo</span></footer>
+</div>
+<script>
+const t=document.getElementById('writing'),wc=document.getElementById('wc');
+const stop=new Set('the a an and or but so because if when while although though as of to in on at for from with by about into over after before between through during without within is are was were be been being am do does did have has had can could should would will may might must i you he she it we they me him her us them my your his its our their this that these those there here very really just also not no yes'.split(' '));
+const connectors=['however','therefore','moreover','furthermore','although','because','firstly','secondly','finally','in conclusion','on the other hand','for example','as a result','in addition','nevertheless','consequently','for instance','in my opinion','to sum up','despite','whereas'];
+function tokens(s){return (s.toLowerCase().match(/[a-z]+(?:'[a-z]+)?/g)||[])}
+function words(){return tokens(t.value).length}
+function update(){wc.textContent=words()}
+t.addEventListener('input',update);
+function esc(s){return s.replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]))}
+function countParagraphs(text){return text.split(/\n\s*\n|\n(?=\S)/).map(x=>x.trim()).filter(Boolean).length}
+function sentenceList(text){return text.split(/(?<=[.!?])\s+/).map(x=>x.trim()).filter(Boolean)}
+function lengthPenalty(n){if(n>180)return .25;if(n>=140)return 0;if(n>=100)return .75;if(n>=80)return 1;if(n>=60)return 1.5;return 2}
+function topicOverlap(topic,text){const q=tokens(topic).filter(w=>w.length>3&&!stop.has(w));if(!q.length)return null;const set=new Set(tokens(text));return q.filter(w=>set.has(w)).length/q.length}
+function repeatedContentWords(text){const arr=tokens(text).filter(w=>w.length>3&&!stop.has(w));const map={};arr.forEach(w=>map[w]=(map[w]||0)+1);return Object.entries(map).filter(([,c])=>c>=4).sort((a,b)=>b[1]-a[1]).slice(0,6)}
+function countMatches(text,re){return (text.match(re)||[]).length}
+function analyseIssues(text){const issues=[];
+const add=(sev,label,orig,tip)=>issues.push({sev,label,orig,tip});
+if(/\bi\b/.test(text)) add('bad','Mayúscula','i','El pronombre personal inglés debe escribirse siempre como “I”.');
+if(/\bpeople is\b/i.test(text)) add('bad','Concordancia','people is','“People” es plural: revisa el verbo que lo acompaña.');
+if(/\bpeople has\b/i.test(text)) add('bad','Concordancia','people has','“People” es plural: normalmente necesita “have”.');
+if(/\b(he|she|it) have\b/i.test(text)) add('bad','Concordancia','he/she/it have','En present perfect o posesión, revisa “has” con tercera persona singular.');
+if(/\b(he|she|it) don't\b/i.test(text)) add('bad','Auxiliar','he/she/it don\'t','En presente simple, la tercera persona usa “doesn’t”.');
+if(/\b(didn't|did not)\s+\w+ed\b/i.test(text)) add('bad','Pasado simple','didn’t + verbo en -ed','Después de “did/didn’t”, usa la forma base del verbo.');
+if(/\b(more|less)\s+\w+er\b/i.test(text)) add('warn','Comparativos','more/less + -er','Evita el doble comparativo: revisa si necesitas “more + adjective” o “adjective-er”.');
+if(/\bdespite of\b/i.test(text)) add('bad','Conector','despite of','“Despite” no lleva “of”. Puedes usar “despite” o “in spite of”.');
+if(/\balthough[^.!?]{0,80}\bbut\b/i.test(text)) add('warn','Conectores','although … but','Normalmente no se usan “although” y “but” en la misma estructura.');
+if(/\bbecause of\s+(he|she|they|we|i|you)\b/i.test(text)) add('warn','Estructura','because of + pronombre sujeto','“Because of” suele ir seguido de sustantivo/gerundio; “because” introduce una oración.');
+if(/\bin the other hand\b/i.test(text)) add('bad','Conector','in the other hand','La expresión habitual es “on the other hand”.');
+if(/\baccording to me\b/i.test(text)) add('warn','Expresión','according to me','Para expresar opinión personal, usa “in my opinion / from my point of view”.');
+if(/\bactually\b/i.test(text)&&/actualmente|currently/i.test(text)) add('warn','False friend','actually','Recuerda: “actually” = en realidad; “currently” = actualmente.');
+if(/\badvices\b/i.test(text)) add('bad','Sustantivo incontable','advices','“Advice” es incontable: no suele llevar -s.');
+if(/\binformations\b/i.test(text)) add('bad','Sustantivo incontable','informations','“Information” es incontable: no suele llevar -s.');
+if(/\bhomeworks\b/i.test(text)) add('bad','Sustantivo incontable','homeworks','“Homework” es incontable: no suele llevar -s.');
+if(/\bdepend of\b/i.test(text)) add('bad','Preposición','depend of','La combinación habitual es “depend on”.');
+if(/\bmarried with\b/i.test(text)) add('warn','Preposición','married with','En inglés estándar se usa normalmente “married to”.');
+if(/\bdiscuss about\b/i.test(text)) add('warn','Verbo','discuss about','“Discuss” suele usarse sin “about”: “discuss a topic”.');
+if(/\bexplain me\b/i.test(text)) add('warn','Estructura verbal','explain me','Usa “explain something to someone”.');
+if(/\bmake a photo\b/i.test(text)) add('warn','Collocation','make a photo','La colocación habitual es “take a photo”.');
+if(/\bmake sport\b/i.test(text)) add('warn','Collocation','make sport','Normalmente se dice “do sport / play sports”.');
+if(/\bpeople who is\b/i.test(text)) add('bad','Concordancia','people who is','Con antecedente plural, revisa “who are”.');
+if(/\bchildrens\b/i.test(text)) add('bad','Plural','childrens','El plural de “child” es “children”, sin -s adicional.');
+if(/\bchilds\b/i.test(text)) add('bad','Plural','childs','El plural de “child” es “children”.');
+if(/\bmore better\b/i.test(text)) add('bad','Comparativo','more better','Usa “better”, no “more better”.');
+if(/\bmore easier\b/i.test(text)) add('bad','Comparativo','more easier','Usa “easier”, no “more easier”.');
+if(/\ba lot of people thinks\b/i.test(text)) add('bad','Concordancia','a lot of people thinks','“People” es plural: revisa la forma verbal.');
+if(/\bcan to\b/i.test(text)) add('bad','Modal','can to','Después de “can” se usa infinitivo sin “to”.');
+if(/\bmust to\b/i.test(text)) add('bad','Modal','must to','Después de “must” se usa infinitivo sin “to”.');
+if(/\bshould to\b/i.test(text)) add('bad','Modal','should to','Después de “should” se usa infinitivo sin “to”.');
+if(/\s+[,.!?;]/.test(text)) add('warn','Puntuación','espacio antes de signo','En inglés no se deja espacio antes de coma, punto, interrogación o exclamación.');
+if(/[,.!?][A-Za-z]/.test(text)) add('warn','Puntuación','signo pegado a la palabra siguiente','Deja un espacio después de los signos de puntuación.');
+if(/\.{3,}/.test(text)) add('warn','Puntuación','...','Evita abusar de puntos suspensivos en un writing académico.');
+return issues.slice(0,10)}
+
+document.getElementById('clear').onclick=()=>{t.value='';document.getElementById('topic').value='';update();document.getElementById('results').style.display='none'};
+document.getElementById('correct').onclick=()=>{
+const text=t.value.trim(),n=words(),topic=document.getElementById('topic').value.trim(),type=document.getElementById('type').value;if(!text){alert('Pega primero una redacción.');return}
+const lower=text.toLowerCase(),pars=countParagraphs(text),sents=sentenceList(text),sentN=sents.length;
+const connUsed=connectors.filter(c=>lower.includes(c));const repeats=repeatedContentWords(text);const issueList=analyseIssues(text);const overlap=topicOverlap(topic,text);
+const q=tokens(text);const content=q.filter(w=>w.length>3&&!stop.has(w));const lexicalDiversity=content.length?new Set(content).size/content.length:0;
+const complex=countMatches(lower,/\b(although|though|whereas|while|unless|if|when|which|who|that|because|since|despite|however|therefore|moreover|furthermore)\b/g);
+const firstPerson=countMatches(lower,/\b(i|my|me|we|our|us)\b/g);
+let a=.25;if(topic){if(overlap>=.35)a=.5;else if(overlap>=.12)a=.25;else a=.25}
+let o=0;if(pars>=3&&connUsed.length>=4)o=.75;else if(pars>=2&&connUsed.length>=2)o=.5;else if(pars>=1&&(connUsed.length>=1||sentN>=5))o=.25;
+let g=.25;if(sentN>=6&&complex>=3)g=.75;else if(sentN>=5&&complex>=1)g=.5;if(issueList.filter(x=>x.sev==='bad').length>=4)g=Math.max(.25,g-.25);
+let l=.25;if(content.length>=45&&lexicalDiversity>=.65)l=.75;else if(content.length>=30&&lexicalDiversity>=.5)l=.5;if(repeats.length>=4)l=Math.max(.25,l-.25);
+let sp=.25;const punctProblems=issueList.filter(x=>x.label==='Puntuación'||x.label==='Mayúscula').length;if(punctProblems>=2)sp=0;
+let raw=a+o+g+l+sp,ded=lengthPenalty(n),total=Math.max(0,raw-ded);const f=x=>x.toFixed(2).replace('.',',');
+['m1','m2','m3','m4','m5'].forEach((id,i)=>document.getElementById(id).textContent=f([a,o,g,l,sp][i])+' / '+['0,50','0,75','0,75','0,75','0,25'][i]);
+document.getElementById('score').innerHTML=f(total)+' <small>/ 3</small>';document.getElementById('lengthPill').textContent=n+' palabras'+(ded?(' · deducción -'+f(ded)):' · extensión correcta');document.getElementById('typePill').textContent=type;
+const strengths=[],improve=[];
+if(n>=140&&n<=180)strengths.push('La extensión está dentro del rango de 140–180 palabras.');else improve.push('Ajusta la extensión a 140–180 palabras para evitar penalización.');
+if(pars>=3)strengths.push('El texto está dividido en varios párrafos.');else improve.push('Divide el texto en al menos 3 párrafos: introducción, desarrollo y cierre.');
+if(connUsed.length>=4)strengths.push('Usas varios conectores: '+connUsed.slice(0,5).join(', ')+'.');else improve.push('Añade conectores variados; ahora se detectan '+connUsed.length+'.');
+if(complex>=3)strengths.push('Hay señales de variedad sintáctica y estructuras subordinadas.');else improve.push('Introduce alguna estructura compleja: although, whereas, if, which, despite…');
+if(lexicalDiversity>=.6)strengths.push('El vocabulario muestra una variedad razonable para la extensión.');
+if(repeats.length)improve.push('Revisa palabras repetidas: '+repeats.map(([w,c])=>w+' ×'+c).join(', ')+'.');
+if(topic&&overlap!==null&&overlap<.12)improve.push('Comprueba que respondes directamente al enunciado: aparecen pocas palabras clave del tema.');else if(topic&&overlap>=.35)strengths.push('El texto reutiliza vocabulario relevante del enunciado.');
+if(type.startsWith('Argumentative')&&firstPerson===0)improve.push('En un opinion essay puedes dejar clara tu postura con expresiones como “In my opinion” o “I believe”.');
+if(issueList.length)improve.push('Revisa los patrones marcados en la sección de errores frecuentes.');
+document.getElementById('strengths').innerHTML=(strengths.length?strengths:['Has completado un borrador que ya puede revisarse con la rúbrica.']).map(x=>'<li>'+esc(x)+'</li>').join('');
+document.getElementById('improve').innerHTML=(improve.length?improve:['Relee el texto buscando una mejora de vocabulario y una estructura más precisa.']).map(x=>'<li>'+esc(x)+'</li>').join('');
+const issues=document.getElementById('issues');if(!issueList.length){issues.innerHTML='<p class="muted">No se han detectado los errores frecuentes incluidos en esta herramienta. Aun así, eso no garantiza que el texto esté libre de errores.</p>'}else{issues.innerHTML=issueList.map(x=>'<div class="issue"><span class="tag '+x.sev+'">'+(x.sev==='bad'?'REVISAR':'ATENCIÓN')+'</span><strong>'+esc(x.label)+'</strong><br><code>'+esc(x.orig)+'</code><div class="muted">'+esc(x.tip)+'</div></div>').join('')}
+let challenge='Elige una frase de tu writing y mejórala usando un conector o una estructura más compleja.';if(repeats.length)challenge='Sustituye al menos dos apariciones de “'+repeats[0][0]+'” por una alternativa más precisa o reformula la oración.';else if(connUsed.length<3)challenge='Añade dos conectores distintos sin repetir “because” o “and”, y comprueba que expresan bien la relación entre ideas.';else if(issueList.length)challenge='Corrige por tu cuenta el primer error marcado arriba y explica qué regla has aplicado.';document.getElementById('challenge').textContent=challenge;
+document.getElementById('results').style.display='block';document.getElementById('results').scrollIntoView({behavior:'smooth'});
+};
+</script>
+</body></html>
